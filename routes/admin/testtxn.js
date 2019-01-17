@@ -3,7 +3,7 @@ var config = require('../../config/config');
 
 module.exports = function (app) {
 
- app.get('/testtxn', function(req,res){
+ app.get('/', function(req,res){
    console.log("in restaurant");
 console.log("--------testtxnjs----");
 res.render('testtxn.ejs',{'config' : config});

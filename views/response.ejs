@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Merchant Check Out Page</title>
+</head>
+<body>
+<% if (restdata == 'true') { 	%>
+	<center><h1>Transaction successful</h1></center>
+     <%     }else
+          { 	%>
+            <center><h1>Transaction unsuccessful</h1></center>
+       <%  }	%>
+		<form method="post" name="f1"> 
+
+			<% for (name in paramlist) {
+			%>
+
+				<div>
+					<!-- <label><%= name %></label> -->
+					<input id='<%= name %>'tabindex="1" maxlength="30" size="30"
+						name='<%= name %>' autocomplete="off"
+						value='<%= paramlist[name] %>' type="hidden">
+				</div>
+				
+				<!-- <input type="label" name='<%= name %>' value='<%= paramlist[name] %>'>
+				</br> -->
+			<%}%>
+			
+		<a style="margin-left:45%" href="/testtxn"><input type="button" value="Go back and pay again"></a>
+		<script type="text/javascript">
+			// document.f1.submit();
+		</script>
+	</form>
+</body>
+</html>

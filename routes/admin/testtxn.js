@@ -3,11 +3,17 @@ var config = require('../../config/config');
 
 module.exports = function (app) {
 
- app.get('/', function(req,res){
+ app.get('/testtxn', function(req,res){
    console.log("in restaurant");
 console.log("--------testtxnjs----");
 res.render('testtxn.ejs',{'config' : config});
   });
+
+
+  app.get('/', function(req,res){
+res.render('index.ejs');
+  });
+
 
 
   app.post('/testtxn',function(req, res) {
